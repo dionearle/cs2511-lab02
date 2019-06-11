@@ -17,7 +17,7 @@ https://gitlab.cse.unsw.edu.au/z5555555/19T2-cs2511-lab02
 
 ## Exercise
 
-Modify the class StaffMember (inside package `staff`) so that it satisfies the following requirements:
+Modify the class StaffMember (inside package `example`) so that it satisfies the following requirements:
 
 * Attributes to store the staff member’s name, salary, hire date, and end date.
 * Appropriate constructors, getters, setters, and other methods you think are necessary.
