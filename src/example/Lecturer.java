@@ -16,13 +16,13 @@ public class Lecturer extends StaffMember {
 	 * The constructor for Lecturer class.
 	 * @param name
 	 * @param salary
-	 * @param hire_date
-	 * @param end_date
+	 * @param hireDate
+	 * @param endDate
 	 * @param school
 	 * @param status
 	 */
-	public Lecturer(String name, int salary, String hire_date, String end_date, String school, char status) {
-		super(name, salary, hire_date, end_date);
+	public Lecturer(String name, int salary, String hireDate, String endDate, String school, char status) {
+		super(name, salary, hireDate, endDate);
 		this.school = school;
 		this.setStatus(status);
 	}
@@ -61,33 +61,22 @@ public class Lecturer extends StaffMember {
 	
 	@Override
 	public String toString() {
-		return "Name:" + this.getName() + "\n"
-        + "Salary:" + this.getSalary() + "\n" + "Hire date:"
-        + this.getHire_date() + "\n" + "End date:" + this.getEnd_date()
-        + "\n" + "School name:" + this.school + "\n" + "Academic status:" 
+		return super.toString() + "\n" + "School name:" + this.school + "\n" + "Academic status:" 
         + this.status + "\n";
 	}
 	
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		
-		if (obj == null) {
+		if (!super.equals(obj)) {
 			return false;
 		}
 		
-		if (getClass() != obj.getClass()) {
+		if (!(obj instanceof Lecturer)) {
 			return false;
 		}
 		
-		Lecturer lecturer = (Lecturer)obj;
-		return getName().equals(lecturer.getName())
-				&& getSalary() == lecturer.getSalary()
-				&& getHire_date().equals(lecturer.getHire_date())
-				&& getEnd_date().equals(lecturer.getEnd_date())
-				&& school.equals(lecturer.school)
+		Lecturer lecturer = (Lecturer) obj;
+		return school.equals(lecturer.school)
 				&& status == lecturer.status;
 	}
 

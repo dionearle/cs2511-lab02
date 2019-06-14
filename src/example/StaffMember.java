@@ -9,21 +9,21 @@ public class StaffMember {
 	
 	private String name;
 	private int salary;
-	private String hire_date;
-	private String end_date;
+	private String hireDate;
+	private String endDate;
 	
 	/**
 	 * The constructor for StaffMember class.
 	 * @param name
 	 * @param salary
-	 * @param hire_date
-	 * @param end_date
+	 * @param hireDate
+	 * @param endDate
 	 */
-	public StaffMember(String name, int salary, String hire_date, String end_date) {
+	public StaffMember(String name, int salary, String hireDate, String endDate) {
 		this.name = name;
 		this.salary = salary;
-		this.hire_date = hire_date;
-		this.end_date = end_date;
+		this.hireDate = hireDate;
+		this.endDate = endDate;
 	}
 	
 	/**
@@ -62,39 +62,39 @@ public class StaffMember {
 	 * Getter method for hire date.
 	 * @return A string represent the hire date.
 	 */
-	public String getHire_date() {
-		return hire_date;
+	public String getHireDate() {
+		return hireDate;
 	}
 
 	/**
 	 * Setter method for hire date.
-	 * @param hire_date
+	 * @param hireDate
 	 */
-	public void setHire_date(String hire_date) {
-		this.hire_date = hire_date;
+	public void setHireDate(String hireDate) {
+		this.hireDate = hireDate;
 	}
 
 	/**
 	 * Getter method for end date.
 	 * @return A string representing the end date.
 	 */
-	public String getEnd_date() {
-		return end_date;
+	public String getEndDate() {
+		return endDate;
 	}
 
 	/**
 	 * Setter method for end date.
 	 * @param end_date
 	 */
-	public void setEnd_date(String end_date) {
-		this.end_date = end_date;
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
 	}
 	
 	@Override
 	public String toString() {
 		return "Name:" + this.name + "\n"
         + "Salary:" + this.salary + "\n" + "Hire date:"
-        + this.hire_date + "\n" + "End date:" + this.end_date + "\n";
+        + this.hireDate + "\n" + "End date:" + this.endDate + "\n";
 	}
 	
 	@Override
@@ -114,8 +114,8 @@ public class StaffMember {
 		StaffMember staffmember = (StaffMember)obj;
 		return name.equals(staffmember.name)
 				&& salary == staffmember.salary
-				&& hire_date.equals(staffmember.hire_date)
-				&& end_date.equals(staffmember.end_date);
+				&& hireDate.equals(staffmember.hireDate)
+				&& endDate.equals(staffmember.endDate);
 	}
 }
 
